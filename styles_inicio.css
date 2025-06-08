@@ -1,0 +1,185 @@
+body {
+    font-family: sans-serif;
+    background-color: #e6e6e6;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 80vh;
+}
+
+
+.sidebar {
+    width: 220px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar nav a {
+    display: block;
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar nav a:hover {
+    background-color: #34495e;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btn-agregar {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-agregar:hover {
+    background-color: #27ae60;
+}
+.btn-cerrar:hover {
+    background-color: #d8432f;
+}
+
+table {
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15); /* sombreado */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+.sano {
+    color: green;
+    font-weight: bold;
+}
+
+.enfermo {
+    color: red;
+    font-weight: bold;
+}
+.muerto {
+    color: #555555 ;
+    font-weight: bold;
+}
+.vendido {
+    color: #2196F3;
+    font-weight: bold;
+}
+
+.btn-ver,
+.btn-editar {
+    text-decoration:none;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-eliminar {
+    text-decoration:none;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+
+    
+}
+
+.btn-ver {
+    background-color: #2980b9;
+}
+
+.btn-editar {
+    background-color: #f39c12;
+}
+.btn-eliminar {
+    background-color: #c00b0b;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-agregar {
+    background-color: #2ecc71;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-cerrar {
+    background-color: #e74c3c;
+    color:white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+

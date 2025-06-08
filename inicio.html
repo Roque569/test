@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Gestión Ganadera - Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_inicio.css') }}">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Sistema de Gestión Ganadera</h2>
+            <nav>
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+                <a href="{{ url_for('ver_ganado') }}">Ganado</a>
+                <a href="{{url_for('vacunaciones')}}">Vacunas</a>
+                <a href="#">Tratamientos</a>
+                <a href="#">Partos</a>
+                <a href="#">Ventas</a>
+                <a href="#">Reportes</a>
+                <a href="#">Configuración</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <h1>Inicio</h1>
+                <div class="acciones">
+                    <a href="{{ url_for('registrar_ganado') }}" class="btn-agregar">Agregar Animal</a>
+                    <a href="{{ url_for('logout') }}" class="btn-cerrar">Cerrar sesión</a>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Raza</th>
+                        <th>Estado</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for animal in animales %}
+                    <tr> 
+                      <!-- <p>{{animal}}</p> -->
+                        <td>{{ animal[0] }}</td>
+                        <td>{{ animal[1] }}</td>
+                        <td>{{ animal[2] }}</td>
+                        <td>{{ animal[3] }}</td>
+                     
+                        <td class="{% if animal[5] == 'Sano' %} sano
+                                   {% elif animal[5] == 'Enfermo' %} enfermo 
+                                   {% elif animal[5] == 'Muerto' %}  muerto 
+                                   {% elif animal[5] == 'Vendido' %} vendido
+                                   {% else %} desconocid 
+                                   {% endif%}">{{ animal[5] }}</td>
+                        
+                       <!-- <td>
+                            <a href="{{ url_for('ver_detalle', id=animal[0]) }}" 
+                             class="btn-ver">Ver</a>
+                             
+                             <a href="{{ url_for('editar', id=animal[0]) }}" 
+                             class="btn-editar">Edi</a>
+                            
+                             <a href="{{ url_for('eliminar', id=animal[0]) }}" 
+                             class="btn-eliminar"
+                             onclick="return confirm('¿Estás seguro de que deseas eliminar este animal?');">Eliminar</a>
+
+                        </td>-->
+                         <td>{{ animal[10][:30] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </main>
+    </div>
+</body>
+</html>
